@@ -27,9 +27,12 @@
    - Use `/` for POSIX, `\` for Windows; add leading `/` when absolute is required. Use `/dev/sdX`/`/dev/sdY` style for block devices (avoid concrete destructive paths).
    - Add required extensions; use `{{.ext}}` only when extension is mandatory and generic.
    - Grouping: `{{item1 item2 ...}}` for repeated args; `{{opt1|opt2}}` for mutually exclusive.
+   - For mutually exclusive subcommands/verbs, prefer unbracketed choices like `{{start|stop}}` instead of `{{[start|stop]}}`.
+   - If a page uses bracketed placeholders for optional flag aliases of the *same* option (e.g., `{{[-i|--interactive]}}`), preserve them; do not expand/flatten unless explicitly requested.
 4. **Options syntax**
    - Prefer long GNU-style options in common pages when available; PowerShell pages use PowerShell-style long options.
    - Prefer space over `=` to separate options/args unless tool requires `=`.
+   - When shorthand option placeholders represent the same flag (e.g., short/long alias), leave them intact instead of rewriting to explicit options unless asked.
 5. **Help/version examples**
    - Typically last two examples, in order: help then version (unless replaced with more useful commands).
 6. **Aliases**
