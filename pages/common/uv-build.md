@@ -3,7 +3,7 @@
 > Build Python packages into source distributions and wheels.
 > More information: <https://docs.astral.sh/uv/reference/cli/#uv-build>.
 
-- Build a package in the current directory:
+- Buid a package in the current directory:
 
 `uv build`
 
