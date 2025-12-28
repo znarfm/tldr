@@ -8,6 +8,7 @@ on:
     paths-ignore:
       - 'pages.*/*/*'
       - 'contributing-guides/style-guide.*.md'
+      - 'contributing-guides/translation-templates/*'
       - 'package-lock.json'
 
 jobs:
